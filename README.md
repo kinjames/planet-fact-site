@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repository](https://github.com/kinjames/netflix)
-- Live Site URL: [Github](https://kinjames.github.io/netflix/)
+- Solution URL: [Repository](https://github.com/kinjames/planet-fact-site)
+- Live Site URL: [Github](https://kinjames.github.io/planet-fact-site/)
 
 ## My process
 
