@@ -1,0 +1,159 @@
+header {
+    nav {
+        border-bottom: .5px solid rgba(255,255,255,.75);
+        height: 12vh;
+        padding-inline: 2rem;
+
+        @include breakpoint-up(medium){
+            width: 100%;
+        }
+
+        .logo {
+            font-family: $secondary-font;
+            text-transform: uppercase;
+            color: $white;
+            font-weight: 500;
+            display: inline-block;
+            @include breakpoint-up(medium){
+                font-size: 1.7rem;
+            }
+
+            @include breakpoint-down(small){
+                font-size: 1.2rem;
+            }
+        }
+
+        .header_menu {
+            > span {
+                display: block;
+                width: 26px;
+                height: 2px;
+                background-color: $white;
+                transition: all 300ms ease-in-out;
+                transform-origin: 3px 1px;
+    
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .nav-links {
+            gap: 1.5rem;
+            
+            a {
+                position: relative;
+                font-size: 0.6875rem;
+                color: $white;
+                opacity: .75;
+                text-transform: uppercase;
+                font-family: $main-font;
+                font-weight: 700;
+
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 0.1875rem;
+                    width: 100%;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                    bottom: -20px;
+                    opacity: 0;
+                    transition: opacity 300ms ease-in-out;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    &::before{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .mercury {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $mercury;
+                        
+                    }
+                }
+            }
+            .venus {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $venus;
+                        
+                    }
+                }
+            }
+            .earth {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $earth;
+                        
+                    }
+                }
+            }
+            .mars {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $mars;
+                        
+                    }
+                }
+            }
+            .jupiter {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $jupiter;
+                        
+                    }
+                }
+            }
+            .saturn {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $saturn;
+                        
+                    }
+                }
+            }
+            .uranus {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $uranus;
+                        
+                    }
+                }
+            }
+            .neptune {
+
+                &:hover {
+
+                    &::before{
+                        background-color: $neptune;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

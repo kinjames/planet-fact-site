@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap');
 
 *,*::before,*::after {
     box-sizing: border-box;
@@ -9,9 +10,16 @@
 
 body {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-size: $font-nm;
+    background: $bg-color;
+    background-image: url('../.././images/background-stars.svg');
+    background-repeat: no-repeat;
 
+}
+
+a {
+    text-decoration: none;
 }
 
 .flex {
@@ -45,6 +53,25 @@ body {
     }
 }
 
+.hide {
+    display: none;
+}
+
 .active {
     opacity: 1;
+}
+
+
+.burger {
+    > span:first-child{
+        transform: rotate(45deg);
+    }
+
+    > span:nth-child(2){
+        opacity: 0;
+    }
+
+    > span:last-child{
+        transform: rotate(-45deg);
+    }
 }

@@ -1,1 +1,159 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 1rem;
+  background: #070724;
+  background-image: url("../.././images/background-stars.svg");
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+@media (max-width: 39.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  opacity: 1;
+}
+
+.burger > span:first-child {
+  transform: rotate(45deg);
+}
+.burger > span:nth-child(2) {
+  opacity: 0;
+}
+.burger > span:last-child {
+  transform: rotate(-45deg);
+}
+
+header nav {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.75);
+  height: 12vh;
+  padding-inline: 2rem;
+}
+@media (min-width: 40em) {
+  header nav {
+    width: 100%;
+  }
+}
+header nav .logo {
+  font-family: "Antonio", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  display: inline-block;
+}
+@media (min-width: 40em) {
+  header nav .logo {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 39.9375em) {
+  header nav .logo {
+    font-size: 1.2rem;
+  }
+}
+header nav .header_menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+  transform-origin: 3px 1px;
+}
+header nav .header_menu > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+header nav .nav-links {
+  gap: 1.5rem;
+}
+header nav .nav-links a {
+  position: relative;
+  font-size: 0.6875rem;
+  color: #fff;
+  opacity: 0.75;
+  text-transform: uppercase;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+header nav .nav-links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1875rem;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+header nav .nav-links a:hover {
+  opacity: 1;
+}
+header nav .nav-links a:hover::before {
+  opacity: 1;
+}
+header nav .nav-links .mercury:hover::before {
+  background-color: #419ebb;
+}
+header nav .nav-links .venus:hover::before {
+  background-color: #eda249;
+}
+header nav .nav-links .earth:hover::before {
+  background-color: #6d2ed5;
+}
+header nav .nav-links .mars:hover::before {
+  background-color: #d14c32;
+}
+header nav .nav-links .jupiter:hover::before {
+  background-color: #d83a34;
+}
+header nav .nav-links .saturn:hover::before {
+  background-color: #cd5120;
+}
+header nav .nav-links .uranus:hover::before {
+  background-color: #1ec1a2;
+}
+header nav .nav-links .neptune:hover::before {
+  background-color: #2d68f0;
+}/*# sourceMappingURL=style.css.map */
