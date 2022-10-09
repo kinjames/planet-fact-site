@@ -10,9 +10,37 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="flex flex-jc-sb flex-ai-c">
+            <a href="#" class="logo">The Planets</a>
+            <a href="#" id="menuBtn" class="header_menu hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="nav-links hide-for-mobile flex">
+                <a href="#" class="mercury">Mercury</a>
+                <a href="#" class="venus">Venus</a>
+                <a href="#" class="earth">Earth</a>
+                <a href="#" class="mars">Mars</a>
+                <a href="#" class="jupiter">Jupiter</a>
+                <a href="#" class="saturn">Saturn</a>
+                <a href="#" class="uranus">Uranus</a>
+                <a href="#" class="neptune">Neptune</a>
+            </div>
 
         </nav>
+        <div class="mobile-menu hide-for-desktop flex flex-col ">
+            <div class="mob-nav">
+                <div class="mer">
+                    <div class="ball">
+
+                    </div>
+                    <p class="name">
+                        Mercury
+                    </p>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
 
@@ -24,3 +52,8 @@
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
+
+
+<!-- 
+    https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap
+ -->
