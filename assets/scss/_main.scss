@@ -1,0 +1,146 @@
+.mobile-view {
+    width: 100%;
+    margin-bottom: 4rem;
+    // border: 1px solid red;
+    .mobile-sections {
+        padding-inline: 1.25rem;
+        margin: 2rem 0 1rem;
+
+        .mob-sec{
+            position: relative;
+            font-size: 0.5625rem;
+            text-transform: uppercase;
+            text-align: center;
+            color: $white;
+            opacity: .65;
+            letter-spacing: 0.120535625rem;
+            font-family: $main-font;
+            font-weight: bold;
+
+            // &::before {
+            //     content: "";
+            //     display: block;
+            //     position: absolute;
+            //     height: 0.1875rem;
+            //     width: 100%;
+            //     margin: 0 auto;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: -15px;
+            //     opacity: 1;
+            //     background-color: red;
+            //     transition: opacity 300ms ease-in-out;
+            // }
+        }
+    }
+
+    .line {
+        width: 100%;
+        position: relative;
+        height: 1px;
+        background-color: rgba(255,255,255,.45);
+
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 0.1875rem;
+            width: 33.33%;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            bottom: 1px;
+            opacity: 1;
+            background-color: red;
+        }
+    }
+
+    .main-details {
+        margin: 4rem auto;
+        .image {
+            width: 45%;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .images {
+            position: relative;
+            margin-bottom: 2rem;
+
+            .small {
+                width: 50%;
+                position: absolute;
+                left: 28%;
+                top: 80%;
+            }
+        }
+    }
+
+    .texts {
+        text-align: center;
+        padding-inline: 1.25rem;
+
+        h1 {
+            font-family: $secondary-font;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $white;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            font-size: 0.775rem;
+            line-height: 1.25rem;
+            font-weight: normal;
+            opacity: .95;
+            margin-bottom: 1.75rem;
+        }
+
+        .src {
+            font-size: 0.75rem;
+            opacity: .5;
+            margin-bottom: 1.5rem;
+
+            a{
+                color: $white;
+                opacity: .75;
+                font-weight: bold;
+                text-decoration: underline;
+
+                img{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    .boxes{
+        padding: 0 1.25rem;
+        margin-bottom: 4rem;
+        gap: .5rem;
+
+        .box{
+            padding: 1rem 2rem;
+            border: 1px solid #ffffff50;
+
+            .text-el{
+                opacity: .5;
+                font-size: .6rem;
+                letter-spacing: 1px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .num-el{
+                font-size: 1.25rem;
+                font-family: $secondary-font;
+                font-weight: normal;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

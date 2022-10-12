@@ -1,11 +1,15 @@
 header {
     nav {
-        border-bottom: .5px solid rgba(255,255,255,.75);
+        border-bottom: .5px solid rgba(255,255,255,.45);
         height: 12vh;
         padding-inline: 2rem;
 
         @include breakpoint-up(medium){
             width: 100%;
+        }
+
+        @include breakpoint-down(small){
+            padding-inline: 1.25rem;
         }
 
         .logo {
@@ -19,7 +23,7 @@ header {
             }
 
             @include breakpoint-down(small){
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
         }
 
@@ -60,7 +64,7 @@ header {
                     margin: 0 auto;
                     left: 0;
                     right: 0;
-                    bottom: -20px;
+                    bottom: -10px;
                     opacity: 0;
                     transition: opacity 300ms ease-in-out;
                 }
@@ -153,6 +157,54 @@ header {
                         
                     }
                 }
+            }
+        }
+    }
+
+    .mobile-menu {
+        padding-inline: 1.25rem;
+        margin-top: 1.5rem;
+
+        .mob-nav {
+            border-bottom: 1px solid rgba(255,255,255,.45);
+            padding: 1.25rem 0;
+            .mer {
+                
+                .name {
+                    font-size: 0.9375rem;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-family: $main-font;
+                    font-weight: bold;
+                    letter-spacing: 0.0852275rem;
+                }
+
+                .merc-ball {
+                    background-color: $mercury;
+                }
+
+                .ven-ball{
+                    background-color: $venus;
+                }
+                .ear-ball{
+                    background-color: $earth;
+                }
+                .mar-ball{
+                    background-color: $mars;
+                }
+                .jup-ball{
+                    background-color: $jupiter;
+                }
+                .sat-ball{
+                    background-color: $saturn;
+                }
+                .ura-ball{
+                    background-color: $uranus;
+                }
+                .nep-ball{
+                    background-color: $neptune;
+                }
+
             }
         }
     }

@@ -9,6 +9,8 @@ body {
   width: 100%;
   height: 100vh;
   font-size: 1rem;
+  font-family: "Spartan", sans-serif;
+  color: #fff;
   background: #070724;
   background-image: url("../.././images/background-stars.svg");
   background-repeat: no-repeat;
@@ -64,14 +66,29 @@ a {
   transform: rotate(-45deg);
 }
 
+.mer {
+  gap: 1.25rem;
+}
+
+.ball {
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+}
+
 header nav {
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
   height: 12vh;
   padding-inline: 2rem;
 }
 @media (min-width: 40em) {
   header nav {
     width: 100%;
+  }
+}
+@media (max-width: 39.9375em) {
+  header nav {
+    padding-inline: 1.25rem;
   }
 }
 header nav .logo {
@@ -88,7 +105,7 @@ header nav .logo {
 }
 @media (max-width: 39.9375em) {
   header nav .logo {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
 header nav .header_menu > span {
@@ -123,7 +140,7 @@ header nav .nav-links a::before {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: -20px;
+  bottom: -10px;
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
@@ -156,4 +173,158 @@ header nav .nav-links .uranus:hover::before {
 }
 header nav .nav-links .neptune:hover::before {
   background-color: #2d68f0;
+}
+header .mobile-menu {
+  padding-inline: 1.25rem;
+  margin-top: 1.5rem;
+}
+header .mobile-menu .mob-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 1.25rem 0;
+}
+header .mobile-menu .mob-nav .mer .name {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Spartan", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.0852275rem;
+}
+header .mobile-menu .mob-nav .mer .merc-ball {
+  background-color: #419ebb;
+}
+header .mobile-menu .mob-nav .mer .ven-ball {
+  background-color: #eda249;
+}
+header .mobile-menu .mob-nav .mer .ear-ball {
+  background-color: #6d2ed5;
+}
+header .mobile-menu .mob-nav .mer .mar-ball {
+  background-color: #d14c32;
+}
+header .mobile-menu .mob-nav .mer .jup-ball {
+  background-color: #d83a34;
+}
+header .mobile-menu .mob-nav .mer .sat-ball {
+  background-color: #cd5120;
+}
+header .mobile-menu .mob-nav .mer .ura-ball {
+  background-color: #1ec1a2;
+}
+header .mobile-menu .mob-nav .mer .nep-ball {
+  background-color: #2d68f0;
+}
+
+.mobile-view {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.mobile-view .mobile-sections {
+  padding-inline: 1.25rem;
+  margin: 2rem 0 1rem;
+}
+.mobile-view .mobile-sections .mob-sec {
+  position: relative;
+  font-size: 0.5625rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  opacity: 0.65;
+  letter-spacing: 0.120535625rem;
+  font-family: "Spartan", sans-serif;
+  font-weight: bold;
+}
+.mobile-view .line {
+  width: 100%;
+  position: relative;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.mobile-view .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1875rem;
+  width: 33.33%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  opacity: 1;
+  background-color: red;
+}
+.mobile-view .main-details {
+  margin: 4rem auto;
+}
+.mobile-view .main-details .image {
+  width: 45%;
+}
+.mobile-view .main-details .image img {
+  width: 100%;
+  max-width: 100%;
+}
+.mobile-view .main-details .images {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.mobile-view .main-details .images .small {
+  width: 50%;
+  position: absolute;
+  left: 28%;
+  top: 80%;
+}
+.mobile-view .texts {
+  text-align: center;
+  padding-inline: 1.25rem;
+}
+.mobile-view .texts h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.mobile-view .texts .content {
+  font-size: 0.775rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+  opacity: 0.95;
+  margin-bottom: 1.75rem;
+}
+.mobile-view .texts .src {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+.mobile-view .texts .src a {
+  color: #fff;
+  opacity: 0.75;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.mobile-view .texts .src a img {
+  margin-left: 5px;
+}
+.mobile-view .boxes {
+  padding: 0 1.25rem;
+  margin-bottom: 4rem;
+  gap: 0.5rem;
+}
+.mobile-view .boxes .box {
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3137254902);
+}
+.mobile-view .boxes .box .text-el {
+  opacity: 0.5;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.mobile-view .boxes .box .num-el {
+  font-size: 1.25rem;
+  font-family: "Antonio", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
