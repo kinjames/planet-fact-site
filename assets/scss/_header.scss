@@ -163,7 +163,10 @@ header {
 
     .mobile-menu {
         padding-inline: 1.25rem;
+        transition: all 300ms ease-in-out;
         margin-top: 1.5rem;
+        z-index: 100;
+        height: 100vh;
 
         .mob-nav {
             border-bottom: 1px solid rgba(255,255,255,.45);

@@ -1,7 +1,6 @@
 .mobile-view {
     width: 100%;
     margin-bottom: 4rem;
-    // border: 1px solid red;
     .mobile-sections {
         padding-inline: 1.25rem;
         margin: 2rem 0 1rem;
@@ -17,20 +16,6 @@
             font-family: $main-font;
             font-weight: bold;
 
-            // &::before {
-            //     content: "";
-            //     display: block;
-            //     position: absolute;
-            //     height: 0.1875rem;
-            //     width: 100%;
-            //     margin: 0 auto;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: -15px;
-            //     opacity: 1;
-            //     background-color: red;
-            //     transition: opacity 300ms ease-in-out;
-            // }
         }
     }
 

@@ -76,6 +76,10 @@ a {
   border-radius: 50%;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 header nav {
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
   height: 12vh;
@@ -176,7 +180,10 @@ header nav .nav-links .neptune:hover::before {
 }
 header .mobile-menu {
   padding-inline: 1.25rem;
+  transition: all 300ms ease-in-out;
   margin-top: 1.5rem;
+  z-index: 100;
+  height: 100vh;
 }
 header .mobile-menu .mob-nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
