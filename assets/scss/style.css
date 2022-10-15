@@ -26,6 +26,21 @@ a {
 .flex-jc-sb {
   justify-content: space-between;
 }
+@media (min-width: 64em) {
+  .flex-jc-sb-a {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 63.9375em) {
+  .flex-jc-sb-a {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 39.9375em) {
+  .flex-jc-sb-a {
+    justify-content: space-between;
+  }
+}
 .flex-jc-c {
   justify-content: center;
 }
@@ -35,9 +50,48 @@ a {
 .flex-col {
   flex-direction: column;
 }
+@media (max-width: 63.9375em) {
+  .flex-med-col {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 64em) {
+  .flex-des-col {
+    flex-direction: column;
+  }
+}
+@media (max-width: 63.9375em) {
+  .flex-des-col {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 64em) {
+  .width {
+    width: 30%;
+  }
+}
+@media (max-width: 63.9375em) {
+  .width {
+    width: 100%;
+  }
+}
 
 @media (max-width: 39.9375em) {
   .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .hide-for-mob-desk {
+    display: none;
+  }
+}
+@media (min-width: 64em) {
+  .hide-for-mob-desk {
     display: none;
   }
 }
@@ -80,19 +134,112 @@ a {
   overflow: hidden;
 }
 
+.container {
+  width: 71.25rem;
+  margin: 0 auto;
+}
+@media (max-width: 87.4375em) {
+  .container {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-family: "Antonio", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+@media (min-width: 64em) {
+  h1 {
+    font-size: 5rem;
+    letter-spacing: 1px;
+  }
+}
+@media (max-width: 63.9375em) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 39.9375em) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.content {
+  font-size: 0.775rem;
+  line-height: 1.25rem;
+  font-weight: normal;
+  opacity: 0.95;
+  margin-bottom: 1.75rem;
+}
+@media (min-width: 40em) {
+  .content {
+    font-size: 0.6875rem;
+  }
+}
+@media (min-width: 64em) {
+  .content {
+    font-size: 0.875rem;
+    line-height: 179%;
+    max-width: 21.875rem;
+  }
+}
+
+.src {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+}
+.src a {
+  color: #fff;
+  opacity: 0.75;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.src a img {
+  margin-left: 5px;
+}
+
+.text-el {
+  opacity: 0.5;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.num-el {
+  font-size: 1.25rem;
+  font-family: "Antonio", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 header nav {
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
   height: 12vh;
   padding-inline: 2rem;
 }
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   header nav {
     width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 63.9375em) {
+  header nav {
+    width: 100%;
+    flex-direction: column;
   }
 }
 @media (max-width: 39.9375em) {
   header nav {
     padding-inline: 1.25rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 header nav .logo {
@@ -284,35 +431,6 @@ header .mobile-menu .mob-nav .mer .nep-ball {
   text-align: center;
   padding-inline: 1.25rem;
 }
-.mobile-view .texts h1 {
-  font-family: "Antonio", sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-.mobile-view .texts .content {
-  font-size: 0.775rem;
-  line-height: 1.25rem;
-  font-weight: normal;
-  opacity: 0.95;
-  margin-bottom: 1.75rem;
-}
-.mobile-view .texts .src {
-  font-size: 0.75rem;
-  opacity: 0.5;
-  margin-bottom: 1.5rem;
-}
-.mobile-view .texts .src a {
-  color: #fff;
-  opacity: 0.75;
-  font-weight: bold;
-  text-decoration: underline;
-}
-.mobile-view .texts .src a img {
-  margin-left: 5px;
-}
 .mobile-view .boxes {
   padding: 0 1.25rem;
   margin-bottom: 4rem;
@@ -322,16 +440,91 @@ header .mobile-menu .mob-nav .mer .nep-ball {
   padding: 1rem 2rem;
   border: 1px solid rgba(255, 255, 255, 0.3137254902);
 }
-.mobile-view .boxes .box .text-el {
-  opacity: 0.5;
-  font-size: 0.6rem;
-  letter-spacing: 1px;
-  font-weight: bold;
-  text-transform: uppercase;
+
+.desktop-view {
+  margin-top: 4.5rem;
+  padding-inline: 2rem;
+  width: 100%;
 }
-.mobile-view .boxes .box .num-el {
-  font-size: 1.25rem;
-  font-family: "Antonio", sans-serif;
-  font-weight: normal;
+.desktop-view .desktop-main {
+  margin-bottom: 5.5rem;
+}
+.desktop-view .desktop-main .desktop-images {
+  width: 65%;
+}
+.desktop-view .desktop-main .desktop-images .image {
+  width: 60%;
+}
+.desktop-view .desktop-main .desktop-images .image img {
+  max-width: 100%;
+  width: 100%;
+}
+.desktop-view .desktop-main .desktop-images .images {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.desktop-view .desktop-main .desktop-images .images .small {
+  width: 30%;
+  position: absolute;
+  left: 36%;
+  top: 70%;
+}
+@media (max-width: 63.9375em) {
+  .desktop-view .desktop-main .desktop-texts {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .desktop-view .desktop-main .desktop-texts .desktop-text-el, .desktop-view .desktop-main .desktop-texts .desktop-tabs {
+    width: 45%;
+  }
+}
+.desktop-view .desktop-main .desktop-texts .desktop-tabs {
+  gap: 0.75rem;
+}
+.desktop-view .desktop-main .desktop-texts .desktop-tabs .tab-1 {
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3137254902);
   text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (min-width: 64em) {
+  .desktop-view .desktop-main .desktop-texts .desktop-tabs .tab-1 {
+    width: 90%;
+  }
+}
+.desktop-view .desktop-main .desktop-texts .desktop-tabs .tab-1 span {
+  color: rgba(255, 255, 255, 0.3137254902);
+}
+.desktop-view .desktop-main .desktop-texts .desktop-tabs .tab-1:hover {
+  background-color: #38384f;
+}
+.desktop-view .parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 0px;
+  margin-bottom: 3rem;
+}
+.desktop-view .div1 {
+  grid-area: 1/1/2/2;
+}
+.desktop-view .div2 {
+  grid-area: 1/2/2/3;
+}
+.desktop-view .div3 {
+  grid-area: 1/3/2/4;
+}
+.desktop-view .div4 {
+  grid-area: 1/4/2/5;
+}
+.desktop-view .border {
+  border: 1px solid rgba(255, 255, 255, 0.3137254902);
+  padding: 1.5rem;
+  gap: 1rem;
 }/*# sourceMappingURL=style.css.map */

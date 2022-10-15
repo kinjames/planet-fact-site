@@ -30,6 +30,19 @@ a {
     &-jc-sb {
         justify-content: space-between;
     }
+    &-jc-sb-a{
+        @include breakpoint-up(large){
+            justify-content: space-between;
+        }
+        @include breakpoint-down(medium){
+            justify-content: space-evenly;
+            
+        }
+        @include breakpoint-down(small){
+            justify-content: space-between;
+        }
+        
+    }
     &-jc-c {
         justify-content: center;
     }
@@ -39,11 +52,46 @@ a {
     &-col{
         flex-direction: column;
     }
+    &-med-col{
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-des-col{
+        @include breakpoint-up(large){
+            flex-direction: column;
+        }
+        @include breakpoint-down(medium){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
 }
+
+.width {
+    @include breakpoint-up(large){
+        width: 30%;
+    }
+    @include breakpoint-down(medium){
+        width: 100%;
+    }
+}
+
+
 
 .hide-for-mobile {
 
     @include breakpoint-down(small){
+        display: none;
+    }
+}
+
+.hide-for-mob-desk {
+    @include breakpoint-down(small){
+        display: none;
+    }
+    @include breakpoint-up(large){
         display: none;
     }
 }
@@ -92,3 +140,81 @@ a {
 .noscroll{
     overflow: hidden;
 }
+
+.container {
+    width: 71.25rem;
+    margin: 0 auto;
+    @include breakpoint-down(large){
+        width: 100%;
+    }
+}
+
+h1 {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $white;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large){
+        font-size: 5rem;
+        letter-spacing: 1px;
+    }
+    @include breakpoint-down(medium){
+        font-size: 3rem;
+    }
+    @include breakpoint-down(small){
+        font-size: 2.5rem;
+    }
+}
+
+.content {
+    font-size: 0.775rem;
+    line-height: 1.25rem;
+    font-weight: normal;
+    opacity: .95;
+    margin-bottom: 1.75rem;
+
+    @include breakpoint-up(medium){
+        font-size: 0.6875rem;
+    }
+    @include breakpoint-up(large){
+        font-size: $font-sm;
+        line-height: 179%;
+        max-width: 21.875rem;
+    }
+}
+
+.src {
+    font-size: 0.75rem;
+    opacity: .5;
+    margin-bottom: 1.5rem;
+
+    a{
+        color: $white;
+        opacity: .75;
+        font-weight: bold;
+        text-decoration: underline;
+
+        img{
+            margin-left: 5px;
+        }
+    }
+}
+
+.text-el{
+    opacity: .5;
+    font-size: .6rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.num-el{
+    font-size: 1.25rem;
+    font-family: $secondary-font;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+// 0.875rem
