@@ -1,2 +1,3 @@
 This is going to contain all the texts and processes that i will be using to get it working.
 I will learn how to create an algorithm and also hot to use pseudocodes
+Thanks
