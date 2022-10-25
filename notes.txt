@@ -8,3 +8,6 @@ querySelectorAll wil be used to select all the planets that willl have the same 
 It will later check if that contains a planet name and then give it
 
 mobile version
+
+
+tab version
