@@ -1,3 +1,8 @@
 This is going to contain all the texts and processes that i will be using to get it working.
 I will learn how to create an algorithm and also hot to use pseudocodes
 Thanks
+
+
+
+querySelectorAll wil be used to select all the planets that willl have the same class name planet.
+It will later check if that contains a planet name and then give it
