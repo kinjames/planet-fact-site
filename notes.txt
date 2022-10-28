@@ -21,6 +21,6 @@ queryselectorall => planets => check planet name and add values
 windows.onload => Earth facts
 
 
-animations => anime.style => fade out
+animations => anime.style => animate__fadeInBottomLeft
 
 
