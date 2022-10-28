@@ -23,4 +23,6 @@ windows.onload => Earth facts
 
 animations => anime.style => animate__fadeInBottomLeft
 
+background stars => confetti animation
+
 
