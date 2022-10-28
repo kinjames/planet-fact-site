@@ -18,4 +18,6 @@ desktop version
 
 queryselectorall => planets => check planet name and add values
 
+windows.onload => Earth facts
+
 
