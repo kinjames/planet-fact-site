@@ -24,6 +24,7 @@
         position: relative;
         height: 1px;
         background-color: rgba(255,255,255,.45);
+        
 
 
         &::after{
@@ -37,7 +38,7 @@
             right: 0;
             bottom: 1px;
             opacity: 1;
-            background-color: red;
+            background-color: blue;
         }
     }
 
@@ -85,6 +86,7 @@
 
 .desktop-view{
     margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
     padding-inline: 2rem;
     width: 100%;
     .desktop-main{
@@ -157,7 +159,6 @@
         grid-template-rows: 1fr;
         grid-column-gap: 1.25rem;
         grid-row-gap: 0px;
-        margin-bottom: 3rem;
         }
         
         .div1 { 
