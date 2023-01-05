@@ -18,17 +18,18 @@
                 <span></span>
             </a>
             <div class="nav-links hide-for-mobile flex">
-                <a href="#"  class="planet_name mercury">Mercury</a>
-                <a href="#"  class="planet_name venus">Venus</a>
-                <a href="#"  class="planet_name earth">Earth</a>
-                <a href="#"  class="planet_name mars">Mars</a>
-                <a href="#"  class="planet_name jupiter">Jupiter</a>
-                <a href="#"  class="planet_name saturn">Saturn</a>
-                <a href="#"  class="planet_name uranus">Uranus</a>
-                <a href="#"  class="planet_name neptune">Neptune</a>
+                <a href="#"  class="planet_name compute mercury">Mercury</a>
+                <a href="#"  class="planet_name compute venus">Venus</a>
+                <a href="#"  class="planet_name compute earth">Earth</a>
+                <a href="#"  class="planet_name compute mars">Mars</a>
+                <a href="#"  class="planet_name compute jupiter">Jupiter</a>
+                <a href="#"  class="planet_name compute saturn">Saturn</a>
+                <a href="#"  class="planet_name compute uranus">Uranus</a>
+                <a href="#"  class="planet_name compute neptune">Neptune</a>
             </div>
 
         </nav>
+        <!-- Mobile Version -->
         <div class="mobile-menu hide-for-desktop flex flex-col hide" id="mobileMenu">
             <div class="mob-nav planet_name mob_mer flex flex-jc-sb flex-ai-c">
                 <div class="mer flex flex-ai-c">
@@ -124,13 +125,13 @@
     <main>
       <section class="mobile-view hide-for-desktop">
         <div class="mobile-sections flex flex-ai-c flex-jc-sb">
-            <p class="overview mob-sec">
+            <p class="overview mob-sec overview-desk">
                 Overview
             </p>
-            <p class="structure mob-sec">
+            <p class="structure mob-sec structures">
                 Structure
             </p>
-            <p class="surface mob-sec">
+            <p class="surface mob-sec geo">
                 Surface
             </p>
         </div>
@@ -138,14 +139,14 @@
 
         <div class="main-details flex-col flex flex-ai-c">
             <div class="image">
-                <img src="./images/planet-earth.svg" alt="">
+                <img src="./images/planet-earth.svg" alt="" class="overview-image">
             </div>
             <div class="image hide">
-                <img src="./images/planet-earth-internal.svg" alt="">
+                <img src="./images/planet-earth-internal.svg" alt="" class="internal-image">
             </div>
             <div class="image images hide">
-                <img src="./images/planet-earth.svg" alt="">
-                <img src="./images/geology-earth.png" class="small" alt="">
+                <img src="./images/planet-earth.svg" alt="" class="geo-image">
+                <img src="./images/geology-earth.png" class="small geology-image" alt="">
             </div>
         </div>
 
@@ -225,15 +226,15 @@
                     </p>
                 </div>
                 <div class="desktop-tabs flex flex-col">
-                    <p class="tab-1 flex">
+                    <p class="tab-1 flex overview-desk sections">
                         <span>01</span>
                         Overview
                     </p>
-                    <p class="tab-1 flex">
+                    <p class="tab-1 flex structure-desk sections structures">
                         <span>02</span>
                         Internal structure
                     </p>
-                    <p class="tab-1 flex">
+                    <p class="tab-1 flex geology-desk sections geo">
                         <span>03</span>
                         surface geology
                     </p>
