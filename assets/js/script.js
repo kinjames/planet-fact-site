@@ -10,9 +10,23 @@ let planetOverviewLink = document.querySelectorAll('.source');
 let numEl = document.querySelectorAll('.num-el');
 let mob_Nav = document.querySelectorAll('.mob-nav');
 
+let overviewImageContainer = document.querySelectorAll('.over-image');
+let internalImageContainer = document.querySelectorAll('.intern-image');
+let geologyImageContainer = document.querySelectorAll('.logy-image');
+
+let overviewImage = document.querySelectorAll('.overview-image');
+let internalImage = document.querySelectorAll('.internal-image');
+let geoImage = document.querySelectorAll('.geo-image');
+let geologyImage = document.querySelectorAll('.geology-image');
+
 
 let structure = document.querySelectorAll('.structures');
 let geology = document.querySelectorAll('.geo');
+
+let rotationEl = document.querySelectorAll('.rotation-el');
+let revolutionEl = document.querySelectorAll('.revolution-el');
+let radiusEl = document.querySelectorAll('.radius-el');
+let averageEl = document.querySelectorAll('.average-el');
 
 
 menuBtn.addEventListener('click',()=>{
@@ -52,6 +66,25 @@ mobNav.forEach(planet_name => {
                 planetOverviewLink[0].href = data[0].overview.source
                 planetOverviewLink[1].href = data[0].overview.source
                 planetOverview[1].style.backgroundColor = '#419ebb'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[0].images.planet
+                overviewImage[1].src = data[0].images.planet
+
+
+
+                rotationEl[0].innerHTML = data[0].rotation
+                rotationEl[1].innerHTML = data[0].rotation
+                revolutionEl[0].innerHTML = data[0].revolution
+                revolutionEl[1].innerHTML = data[0].revolution
+                radiusEl[1].innerHTML = data[0].radius
+                radiusEl[1].innerHTML = data[0].radius
+                averageEl[1].innerHTML = data[0].temperature
+                averageEl[1].innerHTML = data[0].temperature
                 console.log('It is planet mercury');
                 planetOverview.forEach(overview => {
                     overview.addEventListener('click', ()=>{
@@ -65,6 +98,17 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#419ebb';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[0].images.planet
+                            overviewImage[1].src = data[0].images.planet
+
                         })
                     })
                 })
@@ -80,6 +124,16 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = '#419ebb'
                             geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[0].images.internal
+                            internalImage[1].src = data[0].images.internal
                         })
                     })
                 })
@@ -95,16 +149,41 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#419ebb'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[0].images.planet
+                            geoImage[1].src = data[0].images.planet
+                            geologyImage[0].src = data[0].images.geology
+                            geologyImage[1].src = data[0].images.geology
                         })
                     })
                 })
             } 
-            else if (styles.contains('venus') || styles.contains('mob_mer')){
+            else if (styles.contains('venus') || styles.contains('mob_ven')){
                 planetName[0].innerHTML = data[1].name
                 planetName[1].innerHTML = data[1].name
                 planetOverviewText[0].innerHTML = data[1].overview.content
                 planetOverviewText[1].innerHTML = data[1].overview.content
-                console.log('It is planet mercury');
+                planetOverviewLink[0].href = data[0].overview.source
+                planetOverviewLink[1].href = data[0].overview.source
+                planetOverview[1].style.backgroundColor = '#eda249'
+
+
+                rotationEl[0].innerHTML = data[1].rotation
+                rotationEl[1].innerHTML = data[1].rotation
+                revolutionEl[0].innerHTML = data[1].revolution
+                revolutionEl[1].innerHTML = data[1].revolution
+                radiusEl[1].innerHTML = data[1].radius
+                radiusEl[1].innerHTML = data[1].radius
+                averageEl[1].innerHTML = data[1].temperature
+                averageEl[1].innerHTML = data[1].temperature
+                console.log('It is planet venus');
                 planetOverview.forEach(overview => {
                     overview.addEventListener('click', ()=>{
                         fetch('data.json')
@@ -112,6 +191,11 @@ mobNav.forEach(planet_name => {
                         .then(data => {
                             planetOverviewText[0].innerHTML = data[1].overview.content
                             planetOverviewText[1].innerHTML = data[1].overview.content
+                            planetOverviewLink[0].href = data[1].overview.source
+                            planetOverviewLink[1].href = data[1].overview.source
+                            planetOverview[1].style.backgroundColor = '#eda249';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
                         })
                     })
                 })
