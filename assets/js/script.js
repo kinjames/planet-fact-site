@@ -7,6 +7,12 @@ let planetName = document.querySelectorAll('.name-el')
 let planetOverview = document.querySelectorAll('.overview-desk');
 let planetOverviewText = document.querySelectorAll('.content');
 let planetOverviewLink = document.querySelectorAll('.source');
+let numEl = document.querySelectorAll('.num-el');
+let mob_Nav = document.querySelectorAll('.mob-nav');
+
+
+let structure = document.querySelectorAll('.structures');
+let geology = document.querySelectorAll('.geo');
 
 
 menuBtn.addEventListener('click',()=>{
@@ -27,90 +33,95 @@ document.querySelectorAll(".mob-nav").forEach(n => n.addEventListener("click", (
     body.classList.remove('noscroll');
 }))
 
-function overview(i){
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            planetOverviewText[i].innerHTML = data[i].overview.content;
-            planetOverviewLink[i].href = data[i].overview.source;
-            planetName[i].innerHTML = data[i].name;
-        })
-}
-
-
-function structure(){
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            planetOverview.forEach((i)=>{
-                planetOverviewText[num].innerHTML = data[num].overview.content;
-                planetOverviewLink[num].href = data[num].overview.source;
-                planetName[num].innerHTML = data[num].name;
-            })
-        })
-}
-
-function geology(){
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        })
-}
 
 let mobNav = document.querySelectorAll('.planet_name');
 
 
-function mercuryPlanet(){
-    fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data[1].overview)
-    })
-}
-mercuryPlanet()
 
 mobNav.forEach(planet_name => {
     planet_name.addEventListener('click', (e)=>{
         const styles = e.currentTarget.classList;
+        fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            if (styles.contains('mercury') || styles.contains('mob_mer')){
+                planetName[0].innerHTML = data[0].name
+                planetName[1].innerHTML = data[0].name
+                planetOverviewText[0].innerHTML = data[0].overview.content
+                planetOverviewText[1].innerHTML = data[0].overview.content
+                planetOverviewLink[0].href = data[0].overview.source
+                planetOverviewLink[1].href = data[0].overview.source
+                planetOverview[1].style.backgroundColor = '#419ebb'
+                console.log('It is planet mercury');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[0].overview.content
+                            planetOverviewText[1].innerHTML = data[0].overview.content
+                            planetOverviewLink[0].href = data[0].overview.source
+                            planetOverviewLink[1].href = data[0].overview.source
+                            planetOverview[1].style.backgroundColor = '#419ebb';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+                        })
+                    })
+                })
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[0].structure.content
+                            planetOverviewText[1].innerHTML = data[0].structure.content
+                            planetOverviewLink[0].href = data[0].structure.source
+                            planetOverviewLink[1].href = data[0].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#419ebb'
+                            geology[1].style.backgroundColor = 'unset'
+                        })
+                    })
+                })
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[0].geology.content
+                            planetOverviewText[1].innerHTML = data[0].geology.content
+                            planetOverviewLink[0].href = data[0].geology.source
+                            planetOverviewLink[1].href = data[0].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#419ebb'
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('venus') || styles.contains('mob_mer')){
+                planetName[0].innerHTML = data[1].name
+                planetName[1].innerHTML = data[1].name
+                planetOverviewText[0].innerHTML = data[1].overview.content
+                planetOverviewText[1].innerHTML = data[1].overview.content
+                console.log('It is planet mercury');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[1].overview.content
+                            planetOverviewText[1].innerHTML = data[1].overview.content
+                        })
+                    })
+                })
+            } 
 
-
-        if (styles.contains('mercury') || styles.contains('mob_mer')){
-            console.log('It is planet mercury');
-            overview(0)
-        } 
-        else if (styles.contains('venus') || styles.contains('mob_ven')){
-            console.log('It is planet venus')
-            overview(1)
-        }
-        else if (styles.contains('earth') || styles.contains('mob_ear')){
-            console.log('It is planet Earth')
-            overview(2)
-        }
-        else if (styles.contains('mars') || styles.contains('mob_mar')){
-            console.log('It is planet Mars')
-            overview(3)
-        }
-        else if (styles.contains('jupiter') || styles.contains('mob_jup')){
-            console.log('It is planet Jupiter')
-            overview(4)
-        }
-        else if (styles.contains('saturn') || styles.contains('mob_sat')){
-            console.log('It is planet Saturn')
-            overview(5)
-        }
-        else if (styles.contains('uranus') || styles.contains('mob_ura')){
-            console.log('It is planet Uranus')
-            overview(6)
-        }
-        else if (styles.contains('neptune') || styles.contains('mob_nep')){
-            console.log('It is planet Neptune')
-            overview(7)
-        }
+        })
     })
 })
 
-console.log(planetName)
+
 
 
 
