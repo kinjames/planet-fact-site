@@ -28,6 +28,9 @@ let revolutionEl = document.querySelectorAll('.revolution-el');
 let radiusEl = document.querySelectorAll('.radius-el');
 let averageEl = document.querySelectorAll('.average-el');
 
+let line = document.querySelector('.line');
+let after = window.getComputedStyle(line, '::after');
+
 
 menuBtn.addEventListener('click',()=>{
     if (mobileMenu.classList.contains('hide')){
@@ -50,7 +53,7 @@ document.querySelectorAll(".mob-nav").forEach(n => n.addEventListener("click", (
 
 let mobNav = document.querySelectorAll('.planet_name');
 
-
+console.log(after.backgroundColor)
 
 mobNav.forEach(planet_name => {
     planet_name.addEventListener('click', (e)=>{
@@ -75,6 +78,9 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[0].images.planet
                 overviewImage[1].src = data[0].images.planet
 
+                line.style.setProperty('--back','#419ebb');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
 
 
                 rotationEl[0].innerHTML = data[0].rotation
@@ -98,6 +104,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#419ebb';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#419ebb');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -125,6 +135,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#419ebb'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#419ebb');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -149,6 +163,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#419ebb'
+
+                            line.style.setProperty('--back','#419ebb');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -182,6 +200,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[1].images.planet
                 overviewImage[1].src = data[1].images.planet
 
+                line.style.setProperty('--back','#eda249');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[1].rotation
                 rotationEl[1].innerHTML = data[1].rotation
@@ -204,6 +226,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#eda249';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#eda249');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -231,6 +257,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#eda249'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#eda249');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -256,6 +286,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#eda249'
+
+                            line.style.setProperty('--back','#eda249');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -289,6 +323,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[2].images.planet
                 overviewImage[1].src = data[2].images.planet
 
+                line.style.setProperty('--back','#6d2ed5');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[2].rotation
                 rotationEl[1].innerHTML = data[2].rotation
@@ -311,6 +349,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#6d2ed5';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#6d2ed5');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -338,6 +380,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#6d2ed5'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#6d2ed5');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -363,6 +409,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#6d2ed5'
+
+                            line.style.setProperty('--back','#6d2ed5');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -396,6 +446,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[3].images.planet
                 overviewImage[1].src = data[3].images.planet
 
+                line.style.setProperty('--back','#d14c32');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[3].rotation
                 rotationEl[1].innerHTML = data[3].rotation
@@ -418,6 +472,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#d14c32';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#d14c32');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -445,6 +503,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#d14c32'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#d14c32');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -470,6 +532,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#d14c32'
+
+                            line.style.setProperty('--back','#d14c32');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -503,6 +569,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[4].images.planet
                 overviewImage[1].src = data[4].images.planet
 
+                line.style.setProperty('--back','#d83a34');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[4].rotation
                 rotationEl[1].innerHTML = data[4].rotation
@@ -525,6 +595,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#d83a34';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#d83a34');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -551,6 +625,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = '#d83a34'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#d83a34');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
 
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -610,6 +688,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[5].images.planet
                 overviewImage[1].src = data[5].images.planet
 
+                line.style.setProperty('--back','#cd5120');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[5].rotation
                 rotationEl[1].innerHTML = data[5].rotation
@@ -632,6 +714,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#cd5120';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#cd5120');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -659,6 +745,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#cd5120'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#cd5120');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -684,6 +774,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#cd5120'
+
+                            line.style.setProperty('--back','#cd5120');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -717,6 +811,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[6].images.planet
                 overviewImage[1].src = data[6].images.planet
 
+                line.style.setProperty('--back','#1ec1a2');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[6].rotation
                 rotationEl[1].innerHTML = data[6].rotation
@@ -739,6 +837,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#1ec1a2';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#1ec1a2');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -766,6 +868,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#1ec1a2'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#1ec1a2');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -791,6 +897,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#1ec1a2'
+
+                            line.style.setProperty('--back','#1ec1a2');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -824,6 +934,10 @@ mobNav.forEach(planet_name => {
                 overviewImage[0].src = data[7].images.planet
                 overviewImage[1].src = data[7].images.planet
 
+                line.style.setProperty('--back','#2d68f0');
+                line.style.setProperty('--left','0%');
+                line.style.setProperty('--trans','translateX(-0%)');
+
 
                 rotationEl[0].innerHTML = data[7].rotation
                 rotationEl[1].innerHTML = data[7].rotation
@@ -846,6 +960,10 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#2d68f0';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            line.style.setProperty('--back','#2d68f0');
+                            line.style.setProperty('--left','0%');
+                            line.style.setProperty('--trans','translateX(-0%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.remove('hide')
@@ -873,6 +991,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = '#2d68f0'
                             geology[1].style.backgroundColor = 'unset'
 
+                            line.style.setProperty('--back','#2d68f0');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
+
                             internalImageContainer[0].classList.remove('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.add('hide')
@@ -899,6 +1021,10 @@ mobNav.forEach(planet_name => {
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = '#2d68f0'
 
+                            line.style.setProperty('--back','#2d68f0');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
+
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
                             geologyImageContainer[0].classList.remove('hide')
@@ -918,6 +1044,136 @@ mobNav.forEach(planet_name => {
         })
     })
 })
+
+function earthFunction(){
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        planetName[0].innerHTML = data[2].name
+        planetName[1].innerHTML = data[2].name
+        planetOverviewText[0].innerHTML = data[2].overview.content
+        planetOverviewText[1].innerHTML = data[2].overview.content
+        planetOverviewLink[0].href = data[2].overview.source
+        planetOverviewLink[1].href = data[2].overview.source
+        planetOverview[1].style.backgroundColor = '#6d2ed5'
+        internalImageContainer[0].classList.add('hide')
+        overviewImageContainer[0].classList.remove('hide')
+        geologyImageContainer[0].classList.add('hide')
+        internalImageContainer[1].classList.add('hide')
+        overviewImageContainer[1].classList.remove('hide')
+        geologyImageContainer[1].classList.add('hide')
+        overviewImage[0].src = data[2].images.planet
+        overviewImage[1].src = data[2].images.planet
+
+        line.style.setProperty('--back','#6d2ed5');
+        line.style.setProperty('--left','0%');
+        line.style.setProperty('--trans','translateX(-0%)');
+
+
+        rotationEl[0].innerHTML = data[2].rotation
+        rotationEl[1].innerHTML = data[2].rotation
+        revolutionEl[0].innerHTML = data[2].revolution
+        revolutionEl[1].innerHTML = data[2].revolution
+        radiusEl[1].innerHTML = data[2].radius
+        radiusEl[1].innerHTML = data[2].radius
+        averageEl[1].innerHTML = data[2].temperature
+        averageEl[1].innerHTML = data[2].temperature
+        console.log('It is planet venus');
+        planetOverview.forEach(overview => {
+            overview.addEventListener('click', ()=>{
+                fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    planetOverviewText[0].innerHTML = data[2].overview.content
+                    planetOverviewText[1].innerHTML = data[2].overview.content
+                    planetOverviewLink[0].href = data[2].overview.source
+                    planetOverviewLink[1].href = data[2].overview.source
+                    planetOverview[1].style.backgroundColor = '#6d2ed5';
+                    structure[1].style.backgroundColor = 'unset'
+                    geology[1].style.backgroundColor = 'unset'
+
+                    line.style.setProperty('--back','#6d2ed5');
+                    line.style.setProperty('--left','0%');
+                    line.style.setProperty('--trans','translateX(-0%)');
+
+                    internalImageContainer[0].classList.add('hide')
+                    overviewImageContainer[0].classList.remove('hide')
+                    geologyImageContainer[0].classList.add('hide')
+                    internalImageContainer[1].classList.add('hide')
+                    overviewImageContainer[1].classList.remove('hide')
+                    geologyImageContainer[1].classList.add('hide')
+
+                    overviewImage[0].src = data[2].images.planet
+                    overviewImage[1].src = data[2].images.planet
+                })
+            })
+        })
+
+        structure.forEach(struc => {
+            struc.addEventListener('click', ()=>{
+                fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    planetOverviewText[0].innerHTML = data[2].structure.content
+                    planetOverviewText[1].innerHTML = data[2].structure.content
+                    planetOverviewLink[0].href = data[2].structure.source
+                    planetOverviewLink[1].href = data[2].structure.source
+                    planetOverview[1].style.backgroundColor = 'unset'
+                    structure[1].style.backgroundColor = '#6d2ed5'
+                    geology[1].style.backgroundColor = 'unset'
+
+                    line.style.setProperty('--back','#6d2ed5');
+                    line.style.setProperty('--left','51%');
+                    line.style.setProperty('--trans','translateX(-51%)');
+
+                    internalImageContainer[0].classList.remove('hide')
+                    overviewImageContainer[0].classList.add('hide')
+                    geologyImageContainer[0].classList.add('hide')
+                    internalImageContainer[1].classList.remove('hide')
+                    overviewImageContainer[1].classList.add('hide')
+                    geologyImageContainer[1].classList.add('hide')
+
+                    internalImage[0].src = data[2].images.internal
+                    internalImage[1].src = data[2].images.internal
+                })
+            })
+        })
+
+        geology.forEach(geo => {
+            geo.addEventListener('click', ()=>{
+                fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    planetOverviewText[0].innerHTML = data[2].geology.content
+                    planetOverviewText[1].innerHTML = data[2].geology.content
+                    planetOverviewLink[0].href = data[2].geology.source
+                    planetOverviewLink[1].href = data[2].geology.source
+                    planetOverview[1].style.backgroundColor = 'unset'
+                    structure[1].style.backgroundColor = 'unset'
+                    geology[1].style.backgroundColor = '#6d2ed5'
+
+                    line.style.setProperty('--back','#6d2ed5');
+                    line.style.setProperty('--left','100%');
+                    line.style.setProperty('--trans','translateX(-100%)');
+
+                    internalImageContainer[0].classList.add('hide')
+                    overviewImageContainer[0].classList.add('hide')
+                    geologyImageContainer[0].classList.remove('hide')
+                    internalImageContainer[1].classList.add('hide')
+                    overviewImageContainer[1].classList.add('hide')
+                    geologyImageContainer[1].classList.remove('hide')
+
+                    geoImage[0].src = data[2].images.planet
+                    geoImage[1].src = data[2].images.planet
+                    geologyImage[0].src = data[2].images.geology
+                    geologyImage[1].src = data[2].images.geology
+                })
+            })
+        })
+    })
+}
+
+window.onload = earthFunction();
 
 
 

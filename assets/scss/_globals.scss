@@ -218,7 +218,26 @@ h1 {
 }
 
 
-.mercury-back{
-    background-color: #419ebb;
+.line {
+    width: 100%;
+    position: relative;
+    height: 1px;
+    background-color: rgba(255,255,255,.45);
+    
+
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        height: 0.1875rem;
+        width: 30%;
+        transition: all 0.3s ease-in-out;
+        left: var(--left,0%);
+        transform: var(--trans,translateX(-0%));
+        right: 0;
+        bottom: 1px;
+        opacity: 1;
+        background-color: var(--back,red);
+    }
 }
-// 0.875rem

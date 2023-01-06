@@ -1,14 +1,17 @@
 .mobile-view {
     width: 100%;
     margin-bottom: 4rem;
+    transition: all 0.3s ease-in-out;
     .mobile-sections {
         padding-inline: 1.25rem;
         margin: 2rem 0 1rem;
+        transition: all 0.3s ease-in-out;
 
         .mob-sec{
             position: relative;
             font-size: 0.5625rem;
             text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
             text-align: center;
             color: $white;
             opacity: .65;
@@ -19,33 +22,12 @@
         }
     }
 
-    .line {
-        width: 100%;
-        position: relative;
-        height: 1px;
-        background-color: rgba(255,255,255,.45);
-        
-
-
-        &::after{
-            content: "";
-            display: block;
-            position: absolute;
-            height: 0.1875rem;
-            width: 33.33%;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            bottom: 1px;
-            opacity: 1;
-            background-color: blue;
-        }
-    }
 
     .main-details {
         margin: 4rem auto;
         .image {
             width: 45%;
+            transition: all 0.3s ease-in-out;
 
             img {
                 width: 100%;
@@ -56,6 +38,7 @@
         .images {
             position: relative;
             margin-bottom: 2rem;
+            transition: all 0.3s ease-in-out;
 
             .small {
                 width: 50%;
@@ -68,13 +51,16 @@
 
     .texts {
         text-align: center;
+        transition: all 0.3s ease-in-out;
         padding-inline: 1.25rem;
+        transition: all 0.3s ease-in-out;
     }
 
     .boxes{
         padding: 0 1.25rem;
         margin-bottom: 4rem;
         gap: .5rem;
+        transition: all 0.3s ease-in-out;
 
         .box{
             padding: 1rem 2rem;
@@ -89,6 +75,7 @@
     margin-bottom: 4.5rem;
     padding-inline: 2rem;
     width: 100%;
+    transition: all 0.3s ease-in-out;
     .desktop-main{
 
         margin-bottom: 5.5rem;
@@ -104,6 +91,7 @@
 
             .images {
                 position: relative;
+                transition: all 0.3s ease-in-out;
                 margin-bottom: 2rem;
     
                 .small {
@@ -126,7 +114,9 @@
             }
             .desktop-tabs {
                 gap: .75rem;
+                transition: all 0.3s ease-in-out;
                 .tab-1 {
+                    transition: all 0.3s ease-in-out;
                     gap: 0.75rem;
                     padding: 1rem 2rem;
                     width: 100%;

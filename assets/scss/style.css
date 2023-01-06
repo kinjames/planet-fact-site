@@ -218,6 +218,27 @@ h1 {
   text-transform: uppercase;
 }
 
+.line {
+  width: 100%;
+  position: relative;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0.1875rem;
+  width: 30%;
+  transition: all 0.3s ease-in-out;
+  left: var(--left, 0%);
+  transform: var(--trans, translateX(0%));
+  right: 0;
+  bottom: 1px;
+  opacity: 1;
+  background-color: var(--back, red);
+}
+
 header nav {
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.45);
   height: 12vh;
@@ -373,15 +394,18 @@ header .mobile-menu .mob-nav .mer .nep-ball {
 .mobile-view {
   width: 100%;
   margin-bottom: 4rem;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .mobile-sections {
   padding-inline: 1.25rem;
   margin: 2rem 0 1rem;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .mobile-sections .mob-sec {
   position: relative;
   font-size: 0.5625rem;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
   text-align: center;
   color: #fff;
   opacity: 0.65;
@@ -389,30 +413,12 @@ header .mobile-menu .mob-nav .mer .nep-ball {
   font-family: "Spartan", sans-serif;
   font-weight: bold;
 }
-.mobile-view .line {
-  width: 100%;
-  position: relative;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.45);
-}
-.mobile-view .line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 0.1875rem;
-  width: 33.33%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  opacity: 1;
-  background-color: blue;
-}
 .mobile-view .main-details {
   margin: 4rem auto;
 }
 .mobile-view .main-details .image {
   width: 45%;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .main-details .image img {
   width: 100%;
@@ -421,6 +427,7 @@ header .mobile-menu .mob-nav .mer .nep-ball {
 .mobile-view .main-details .images {
   position: relative;
   margin-bottom: 2rem;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .main-details .images .small {
   width: 50%;
@@ -430,12 +437,15 @@ header .mobile-menu .mob-nav .mer .nep-ball {
 }
 .mobile-view .texts {
   text-align: center;
+  transition: all 0.3s ease-in-out;
   padding-inline: 1.25rem;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .boxes {
   padding: 0 1.25rem;
   margin-bottom: 4rem;
   gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
 }
 .mobile-view .boxes .box {
   padding: 1rem 2rem;
@@ -447,6 +457,7 @@ header .mobile-menu .mob-nav .mer .nep-ball {
   margin-bottom: 4.5rem;
   padding-inline: 2rem;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 .desktop-view .desktop-main {
   margin-bottom: 5.5rem;
@@ -463,6 +474,7 @@ header .mobile-menu .mob-nav .mer .nep-ball {
 }
 .desktop-view .desktop-main .desktop-images .images {
   position: relative;
+  transition: all 0.3s ease-in-out;
   margin-bottom: 2rem;
 }
 .desktop-view .desktop-main .desktop-images .images .small {
@@ -483,8 +495,10 @@ header .mobile-menu .mob-nav .mer .nep-ball {
 }
 .desktop-view .desktop-main .desktop-texts .desktop-tabs {
   gap: 0.75rem;
+  transition: all 0.3s ease-in-out;
 }
 .desktop-view .desktop-main .desktop-texts .desktop-tabs .tab-1 {
+  transition: all 0.3s ease-in-out;
   gap: 0.75rem;
   padding: 1rem 2rem;
   width: 100%;
