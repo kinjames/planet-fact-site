@@ -170,9 +170,17 @@ mobNav.forEach(planet_name => {
                 planetName[1].innerHTML = data[1].name
                 planetOverviewText[0].innerHTML = data[1].overview.content
                 planetOverviewText[1].innerHTML = data[1].overview.content
-                planetOverviewLink[0].href = data[0].overview.source
-                planetOverviewLink[1].href = data[0].overview.source
+                planetOverviewLink[0].href = data[1].overview.source
+                planetOverviewLink[1].href = data[1].overview.source
                 planetOverview[1].style.backgroundColor = '#eda249'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[1].images.planet
+                overviewImage[1].src = data[1].images.planet
 
 
                 rotationEl[0].innerHTML = data[1].rotation
@@ -196,6 +204,712 @@ mobNav.forEach(planet_name => {
                             planetOverview[1].style.backgroundColor = '#eda249';
                             structure[1].style.backgroundColor = 'unset'
                             geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[1].images.planet
+                            overviewImage[1].src = data[1].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[1].structure.content
+                            planetOverviewText[1].innerHTML = data[1].structure.content
+                            planetOverviewLink[0].href = data[1].structure.source
+                            planetOverviewLink[1].href = data[1].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#eda249'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[1].images.internal
+                            internalImage[1].src = data[1].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[1].geology.content
+                            planetOverviewText[1].innerHTML = data[1].geology.content
+                            planetOverviewLink[0].href = data[1].geology.source
+                            planetOverviewLink[1].href = data[1].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#eda249'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[1].images.planet
+                            geoImage[1].src = data[1].images.planet
+                            geologyImage[0].src = data[1].images.geology
+                            geologyImage[1].src = data[1].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('earth') || styles.contains('mob_ear')){
+                planetName[0].innerHTML = data[2].name
+                planetName[1].innerHTML = data[2].name
+                planetOverviewText[0].innerHTML = data[2].overview.content
+                planetOverviewText[1].innerHTML = data[2].overview.content
+                planetOverviewLink[0].href = data[2].overview.source
+                planetOverviewLink[1].href = data[2].overview.source
+                planetOverview[1].style.backgroundColor = '#6d2ed5'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[2].images.planet
+                overviewImage[1].src = data[2].images.planet
+
+
+                rotationEl[0].innerHTML = data[2].rotation
+                rotationEl[1].innerHTML = data[2].rotation
+                revolutionEl[0].innerHTML = data[2].revolution
+                revolutionEl[1].innerHTML = data[2].revolution
+                radiusEl[1].innerHTML = data[2].radius
+                radiusEl[1].innerHTML = data[2].radius
+                averageEl[1].innerHTML = data[2].temperature
+                averageEl[1].innerHTML = data[2].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[2].overview.content
+                            planetOverviewText[1].innerHTML = data[2].overview.content
+                            planetOverviewLink[0].href = data[2].overview.source
+                            planetOverviewLink[1].href = data[2].overview.source
+                            planetOverview[1].style.backgroundColor = '#6d2ed5';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[2].images.planet
+                            overviewImage[1].src = data[2].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[2].structure.content
+                            planetOverviewText[1].innerHTML = data[2].structure.content
+                            planetOverviewLink[0].href = data[2].structure.source
+                            planetOverviewLink[1].href = data[2].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#6d2ed5'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[2].images.internal
+                            internalImage[1].src = data[2].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[2].geology.content
+                            planetOverviewText[1].innerHTML = data[2].geology.content
+                            planetOverviewLink[0].href = data[2].geology.source
+                            planetOverviewLink[1].href = data[2].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#6d2ed5'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[2].images.planet
+                            geoImage[1].src = data[2].images.planet
+                            geologyImage[0].src = data[2].images.geology
+                            geologyImage[1].src = data[2].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('mars') || styles.contains('mob_mar')){
+                planetName[0].innerHTML = data[3].name
+                planetName[1].innerHTML = data[3].name
+                planetOverviewText[0].innerHTML = data[3].overview.content
+                planetOverviewText[1].innerHTML = data[3].overview.content
+                planetOverviewLink[0].href = data[3].overview.source
+                planetOverviewLink[1].href = data[3].overview.source
+                planetOverview[1].style.backgroundColor = '#d14c32'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[3].images.planet
+                overviewImage[1].src = data[3].images.planet
+
+
+                rotationEl[0].innerHTML = data[3].rotation
+                rotationEl[1].innerHTML = data[3].rotation
+                revolutionEl[0].innerHTML = data[3].revolution
+                revolutionEl[1].innerHTML = data[3].revolution
+                radiusEl[1].innerHTML = data[3].radius
+                radiusEl[1].innerHTML = data[3].radius
+                averageEl[1].innerHTML = data[3].temperature
+                averageEl[1].innerHTML = data[3].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[3].overview.content
+                            planetOverviewText[1].innerHTML = data[3].overview.content
+                            planetOverviewLink[0].href = data[3].overview.source
+                            planetOverviewLink[1].href = data[3].overview.source
+                            planetOverview[1].style.backgroundColor = '#d14c32';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[3].images.planet
+                            overviewImage[1].src = data[3].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[3].structure.content
+                            planetOverviewText[1].innerHTML = data[3].structure.content
+                            planetOverviewLink[0].href = data[3].structure.source
+                            planetOverviewLink[1].href = data[3].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#d14c32'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[3].images.internal
+                            internalImage[1].src = data[3].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[3].geology.content
+                            planetOverviewText[1].innerHTML = data[3].geology.content
+                            planetOverviewLink[0].href = data[3].geology.source
+                            planetOverviewLink[1].href = data[3].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#d14c32'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[3].images.planet
+                            geoImage[1].src = data[3].images.planet
+                            geologyImage[0].src = data[3].images.geology
+                            geologyImage[1].src = data[3].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('jupiter') || styles.contains('mob_jup')){
+                planetName[0].innerHTML = data[4].name
+                planetName[1].innerHTML = data[4].name
+                planetOverviewText[0].innerHTML = data[4].overview.content
+                planetOverviewText[1].innerHTML = data[4].overview.content
+                planetOverviewLink[0].href = data[4].overview.source
+                planetOverviewLink[1].href = data[4].overview.source
+                planetOverview[1].style.backgroundColor = '#d83a34'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[4].images.planet
+                overviewImage[1].src = data[4].images.planet
+
+
+                rotationEl[0].innerHTML = data[4].rotation
+                rotationEl[1].innerHTML = data[4].rotation
+                revolutionEl[0].innerHTML = data[4].revolution
+                revolutionEl[1].innerHTML = data[4].revolution
+                radiusEl[1].innerHTML = data[4].radius
+                radiusEl[1].innerHTML = data[4].radius
+                averageEl[1].innerHTML = data[4].temperature
+                averageEl[1].innerHTML = data[4].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[4].overview.content
+                            planetOverviewText[1].innerHTML = data[4].overview.content
+                            planetOverviewLink[0].href = data[4].overview.source
+                            planetOverviewLink[1].href = data[4].overview.source
+                            planetOverview[1].style.backgroundColor = '#d83a34';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[4].images.planet
+                            overviewImage[1].src = data[4].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[4].structure.content
+                            planetOverviewText[1].innerHTML = data[4].structure.content
+                            planetOverviewLink[0].href = data[4].structure.source
+                            planetOverviewLink[1].href = data[4].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#d83a34'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[4].images.internal
+                            internalImage[1].src = data[4].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[4].geology.content
+                            planetOverviewText[1].innerHTML = data[4].geology.content
+                            planetOverviewLink[0].href = data[4].geology.source
+                            planetOverviewLink[1].href = data[4].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#d83a34'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[4].images.planet
+                            geoImage[1].src = data[4].images.planet
+                            geologyImage[0].src = data[4].images.geology
+                            geologyImage[1].src = data[4].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('saturn') || styles.contains('mob_sat')){
+                planetName[0].innerHTML = data[5].name
+                planetName[1].innerHTML = data[5].name
+                planetOverviewText[0].innerHTML = data[5].overview.content
+                planetOverviewText[1].innerHTML = data[5].overview.content
+                planetOverviewLink[0].href = data[5].overview.source
+                planetOverviewLink[1].href = data[5].overview.source
+                planetOverview[1].style.backgroundColor = '#cd5120'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[5].images.planet
+                overviewImage[1].src = data[5].images.planet
+
+
+                rotationEl[0].innerHTML = data[5].rotation
+                rotationEl[1].innerHTML = data[5].rotation
+                revolutionEl[0].innerHTML = data[5].revolution
+                revolutionEl[1].innerHTML = data[5].revolution
+                radiusEl[1].innerHTML = data[5].radius
+                radiusEl[1].innerHTML = data[5].radius
+                averageEl[1].innerHTML = data[5].temperature
+                averageEl[1].innerHTML = data[5].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[5].overview.content
+                            planetOverviewText[1].innerHTML = data[5].overview.content
+                            planetOverviewLink[0].href = data[5].overview.source
+                            planetOverviewLink[1].href = data[5].overview.source
+                            planetOverview[1].style.backgroundColor = '#cd5120';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[5].images.planet
+                            overviewImage[1].src = data[5].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[5].structure.content
+                            planetOverviewText[1].innerHTML = data[5].structure.content
+                            planetOverviewLink[0].href = data[5].structure.source
+                            planetOverviewLink[1].href = data[5].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#cd5120'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[5].images.internal
+                            internalImage[1].src = data[5].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[5].geology.content
+                            planetOverviewText[1].innerHTML = data[5].geology.content
+                            planetOverviewLink[0].href = data[5].geology.source
+                            planetOverviewLink[1].href = data[5].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#cd5120'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[5].images.planet
+                            geoImage[1].src = data[5].images.planet
+                            geologyImage[0].src = data[5].images.geology
+                            geologyImage[1].src = data[5].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('uranus') || styles.contains('mob_ura')){
+                planetName[0].innerHTML = data[6].name
+                planetName[1].innerHTML = data[6].name
+                planetOverviewText[0].innerHTML = data[6].overview.content
+                planetOverviewText[1].innerHTML = data[6].overview.content
+                planetOverviewLink[0].href = data[6].overview.source
+                planetOverviewLink[1].href = data[6].overview.source
+                planetOverview[1].style.backgroundColor = '#1ec1a2'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[6].images.planet
+                overviewImage[1].src = data[6].images.planet
+
+
+                rotationEl[0].innerHTML = data[6].rotation
+                rotationEl[1].innerHTML = data[6].rotation
+                revolutionEl[0].innerHTML = data[6].revolution
+                revolutionEl[1].innerHTML = data[6].revolution
+                radiusEl[1].innerHTML = data[6].radius
+                radiusEl[1].innerHTML = data[6].radius
+                averageEl[1].innerHTML = data[6].temperature
+                averageEl[1].innerHTML = data[6].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[6].overview.content
+                            planetOverviewText[1].innerHTML = data[6].overview.content
+                            planetOverviewLink[0].href = data[6].overview.source
+                            planetOverviewLink[1].href = data[6].overview.source
+                            planetOverview[1].style.backgroundColor = '#1ec1a2';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[6].images.planet
+                            overviewImage[1].src = data[6].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[6].structure.content
+                            planetOverviewText[1].innerHTML = data[6].structure.content
+                            planetOverviewLink[0].href = data[6].structure.source
+                            planetOverviewLink[1].href = data[6].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#1ec1a2'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[6].images.internal
+                            internalImage[1].src = data[6].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[6].geology.content
+                            planetOverviewText[1].innerHTML = data[6].geology.content
+                            planetOverviewLink[0].href = data[6].geology.source
+                            planetOverviewLink[1].href = data[6].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#1ec1a2'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[6].images.planet
+                            geoImage[1].src = data[6].images.planet
+                            geologyImage[0].src = data[6].images.geology
+                            geologyImage[1].src = data[6].images.geology
+                        })
+                    })
+                })
+            } 
+            else if (styles.contains('neptune') || styles.contains('mob_nep')){
+                planetName[0].innerHTML = data[7].name
+                planetName[1].innerHTML = data[7].name
+                planetOverviewText[0].innerHTML = data[7].overview.content
+                planetOverviewText[1].innerHTML = data[7].overview.content
+                planetOverviewLink[0].href = data[7].overview.source
+                planetOverviewLink[1].href = data[7].overview.source
+                planetOverview[1].style.backgroundColor = '#2d68f0'
+                internalImageContainer[0].classList.add('hide')
+                overviewImageContainer[0].classList.remove('hide')
+                geologyImageContainer[0].classList.add('hide')
+                internalImageContainer[1].classList.add('hide')
+                overviewImageContainer[1].classList.remove('hide')
+                geologyImageContainer[1].classList.add('hide')
+                overviewImage[0].src = data[7].images.planet
+                overviewImage[1].src = data[7].images.planet
+
+
+                rotationEl[0].innerHTML = data[7].rotation
+                rotationEl[1].innerHTML = data[7].rotation
+                revolutionEl[0].innerHTML = data[7].revolution
+                revolutionEl[1].innerHTML = data[7].revolution
+                radiusEl[1].innerHTML = data[7].radius
+                radiusEl[1].innerHTML = data[7].radius
+                averageEl[1].innerHTML = data[7].temperature
+                averageEl[1].innerHTML = data[7].temperature
+                console.log('It is planet venus');
+                planetOverview.forEach(overview => {
+                    overview.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[7].overview.content
+                            planetOverviewText[1].innerHTML = data[7].overview.content
+                            planetOverviewLink[0].href = data[7].overview.source
+                            planetOverviewLink[1].href = data[7].overview.source
+                            planetOverview[1].style.backgroundColor = '#2d68f0';
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.remove('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.remove('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            overviewImage[0].src = data[7].images.planet
+                            overviewImage[1].src = data[7].images.planet
+                        })
+                    })
+                })
+
+                structure.forEach(struc => {
+                    struc.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[7].structure.content
+                            planetOverviewText[1].innerHTML = data[7].structure.content
+                            planetOverviewLink[0].href = data[7].structure.source
+                            planetOverviewLink[1].href = data[7].structure.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = '#2d68f0'
+                            geology[1].style.backgroundColor = 'unset'
+
+                            internalImageContainer[0].classList.remove('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.add('hide')
+                            internalImageContainer[1].classList.remove('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.add('hide')
+
+                            internalImage[0].src = data[7].images.internal
+                            internalImage[1].src = data[7].images.internal
+                        })
+                    })
+                })
+
+                geology.forEach(geo => {
+                    geo.addEventListener('click', ()=>{
+                        fetch('data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            planetOverviewText[0].innerHTML = data[7].geology.content
+                            planetOverviewText[1].innerHTML = data[7].geology.content
+                            planetOverviewLink[0].href = data[7].geology.source
+                            planetOverviewLink[1].href = data[7].geology.source
+                            planetOverview[1].style.backgroundColor = 'unset'
+                            structure[1].style.backgroundColor = 'unset'
+                            geology[1].style.backgroundColor = '#2d68f0'
+
+                            internalImageContainer[0].classList.add('hide')
+                            overviewImageContainer[0].classList.add('hide')
+                            geologyImageContainer[0].classList.remove('hide')
+                            internalImageContainer[1].classList.add('hide')
+                            overviewImageContainer[1].classList.add('hide')
+                            geologyImageContainer[1].classList.remove('hide')
+
+                            geoImage[0].src = data[7].images.planet
+                            geoImage[1].src = data[7].images.planet
+                            geologyImage[0].src = data[7].images.geology
+                            geologyImage[1].src = data[7].images.geology
                         })
                     })
                 })
