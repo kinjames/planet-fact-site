@@ -28,6 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
+![](./screenshot.gif)
 ![](./screenshot.jpg)
 
 ### Links
@@ -41,17 +42,22 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- CSS custom grid
 - Scss
 - Flexbox
 - JavaScript
+
+### What I learned
+
+- How to use javascript to style ::after or before css code
+
+![](./carbon.png)
 
 ### Layout
 
 The designs were created to the following widths:
 
 - Mobile: 375px
-- Desktop: 1440px
+- Desktop: 1140px
 
 ## Author
 
