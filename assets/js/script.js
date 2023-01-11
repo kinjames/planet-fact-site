@@ -1,5 +1,3 @@
-console.log('Hello, World!');
-
 let menuBtn = document.getElementById('menuBtn');
 let mobileMenu = document.getElementById('mobileMenu');
 const body = document.querySelector('body');
@@ -53,7 +51,6 @@ document.querySelectorAll(".mob-nav").forEach(n => n.addEventListener("click", (
 
 let mobNav = document.querySelectorAll('.planet_name');
 
-console.log(after.backgroundColor)
 
 mobNav.forEach(planet_name => {
     planet_name.addEventListener('click', (e)=>{
@@ -654,7 +651,11 @@ mobNav.forEach(planet_name => {
                             planetOverviewLink[1].href = data[4].geology.source
                             planetOverview[1].style.backgroundColor = 'unset'
                             structure[1].style.backgroundColor = 'unset'
-                            geology[1].style.backgroundColor = '#d83a34'
+                            geology[1].style.backgroundColor = '#d83a34';
+
+                            line.style.setProperty('--back','#d83a34');
+                            line.style.setProperty('--left','51%');
+                            line.style.setProperty('--trans','translateX(-51%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
@@ -1078,7 +1079,7 @@ function earthFunction(){
         radiusEl[1].innerHTML = data[2].radius
         averageEl[1].innerHTML = data[2].temperature
         averageEl[1].innerHTML = data[2].temperature
-        console.log('It is planet venus');
+        console.log('It is planet Earth');
         planetOverview.forEach(overview => {
             overview.addEventListener('click', ()=>{
                 fetch('data.json')
