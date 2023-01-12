@@ -654,8 +654,8 @@ mobNav.forEach(planet_name => {
                             geology[1].style.backgroundColor = '#d83a34';
 
                             line.style.setProperty('--back','#d83a34');
-                            line.style.setProperty('--left','51%');
-                            line.style.setProperty('--trans','translateX(-51%)');
+                            line.style.setProperty('--left','100%');
+                            line.style.setProperty('--trans','translateX(-100%)');
 
                             internalImageContainer[0].classList.add('hide')
                             overviewImageContainer[0].classList.add('hide')
